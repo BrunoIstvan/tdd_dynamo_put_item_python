@@ -1,4 +1,4 @@
-# tdd_s3_put_object_python
+# tdd_dynamo_put_item_python
 
 Criar virtualenv:
 
