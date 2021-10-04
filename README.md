@@ -19,7 +19,7 @@ Rodar os testes unitários:
 
 Criar arquivo zip para subir no lambda:
 
-    zip dynamo_put_item_python.zip lambda_function.py app/ 
+    zip -r dynamo_put_item_python.zip lambda_function.py app/* -x "*.pyc" -x ".pytest_cache"  
 
 Desativar virtualenv
 
@@ -27,6 +27,6 @@ Desativar virtualenv
 
 Atualizar código do lambda:
 
-    aws lambda update-function-code --function-name <lambda-function-name> --zip-file fileb://dynamo_put_item_python.zip
+    aws lambda update-function-code --function-name tdd_dynamo_put_item --zip-file fileb://dynamo_put_item_python.zip
 
     
